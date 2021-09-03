@@ -20,6 +20,6 @@ export class AppComponent {
           combineLatest([of(res), this.logger.getUser(res.userId)])
         )
       )
-      .subscribe(value => console.log(value));
+      .subscribe(([article, user]) => console.log(article, user));
   }
 }
